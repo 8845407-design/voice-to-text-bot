@@ -13,9 +13,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Загружаем модель Whisper (будет загружена при первом запуске)
-# Используем модель 'base' - хороший баланс между скоростью и качеством
+# Используем модель 'tiny' - легкая модель для Free плана Render (512MB RAM)
 print("Загрузка модели Whisper...")
-model = whisper.load_model("base")
+model = whisper.load_model("tiny")
 print("Модель Whisper загружена!")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
